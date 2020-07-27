@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     // start with strings, numbers and booleans
+    let city='İstanbul';
+    let city2=city;
+    console.log(city+' '+city2);
+    city2='Eskişehir';
+    console.log(city+' '+city2);
+
+    // Let's say we have an array
+    const players = ['Wesley', 'Drogba', 'Onye', 'Muslera'];
+    const players2=players;
+    console.log(players+' '+players2);
+    players2[0]='Marcao';
+    console.log(players+' '+players2);
+    // and we want to make a copy of it.
+    const players3=players.slice();
+    players3[2]='Donk';
+    console.log(players3 +' '+ players);
+    // You might think we can just do something like this:
+
+    // however what happens when we update that array?
+
+    // now here is the problem!
+
+    // oh no - we have edited the original array too!
+
+    // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+
+    // So, how do we fix this? We take a copy instead!
+
+    // one way
+
+    // or create a new array and concat the old one in
+
+    // or use the new ES6 Spread
+
+    // now when we update it, the original one isn't changed
+
+    // The same thing goes for objects, let's say we have a person object
+
+    // with Objects
+    const person = {
+      name: 'Wes Bos',
+      age: 80
+    };
+
+    // and think we make a copy:
+
+    // how do we take a copy instead?
+
+    // We will hopefully soon see the object ...spread
+
+    // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+</script>
+</html>
